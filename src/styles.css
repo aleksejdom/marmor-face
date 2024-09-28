@@ -1,6 +1,11 @@
 body {
-  font-family: sans-serif;
-  overflow: hidden;
+  font-family: "DM Sans", sans-serif;
+  font-optical-sizing: auto;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 #webgi-canvas {
   width: 100%;
@@ -8,10 +13,182 @@ body {
   border-radius: 0.5rem;
 }
 #webgi-canvas-container{
-  width: 80vw;
-  height: 80vh;
-  margin: 10vh 10vw;
-  border-radius: 0.5rem;
+  width: 100vw;
+  height: 100vh;  
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+}
 
-  box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
+nav.nav--bar {
+  width: 100%;
+  height: 80px;
+  display: flex;
+  flex-direction: row;
+  align-content: space-between;
+  justify-content: space-between;
+  position: absolute;
+  top: 0px; 
+  padding: 20px;
+  box-sizing: border-box;
+  position: fixed;
+}
+
+nav.nav--bar svg {
+  width: 45px;;
+  height: 45px; 
+  display: block;
+  cursor: pointer;
+}
+
+button.btn--navbar {
+  display: flex;
+  align-items: center;
+  background: #000;
+  color: #FFF;
+  border: none;
+  border-radius: 50px;
+  padding: 20px 30px;
+  width: fit-content;
+  cursor: pointer; 
+  right: 0;
+}
+
+section.section {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+}
+
+section.section h1 {
+  font-size: 250px; 
+  line-height: 1;
+  margin: 0 0 25px;
+  text-transform: uppercase; 
+}
+
+section.section h3 {
+  font-size: 130px;
+  max-width: 960px;
+  line-height: 1;
+  margin: 0 0 45px; 
+}
+
+section.section p {
+  font-size: 32px;
+  line-height: 1.4;
+  max-width: 740px;
+  margin: 0;
+}
+
+.text--wrap {
+  transform: translateX(35%);
+  width: 100%;
+}
+
+section.section--2 {
+ position: relative;
+}
+
+section.section--1 {
+  align-items: center;
+}
+
+section.section--1 .text--wrap {
+  transform: translateX(0);
+  padding-left: 0;
+  width: fit-content;
+}
+
+section.section--2 .text--wrap {
+  position: absolute;
+  top: 20%;
+  width: fit-content;
+  left: 25%;
+}
+
+section.section--2 .text--wrap h3 {
+ font-size: 100px;
+}
+
+section.section--2 .text--wrap p {
+  font-size: 18px;
+  max-width: 600px;
+}
+
+.line-bg {
+  width: 100%;
+  height: 800px;
+  background: rgb(210, 210, 230);
+  transform: skew(20deg) rotate(21deg);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.section--contact > .text--wrap h3 {
+ font-size: 180px;
+ line-height: 1;
+ margin-bottom: 5px;
+}
+
+.section--contact > .text--wrap ul {
+  display: flex;
+  gap: 45px;
+  margin: 0;
+  padding: 0;
+}
+
+.section--contact > .text--wrap ul li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+ 
+}
+
+.section--contact > .text--wrap  ul li a {
+  text-decoration: none;
+  color: #000;
+  font-size: 18px;
+  line-height: 1.2;
+  letter-spacing: 6.35px;
+}
+
+ 
+.section--contact > .text--wrap
+{
+  transform: translateX(0px);
+  padding-left: 8rem; 
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #000;
+  color: #FFF;
+  z-index: 10;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+}
+
+.loader .progress {
+  position: absolute;
+  top: 52%;
+  height: 1px;
+  width: 30%;
+  transition: all 1s ease;
+  background-color: #FFF;
+  transform: translateX(0);
 }

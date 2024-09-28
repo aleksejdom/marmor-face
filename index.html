@@ -1,18 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <title>WebGi starter</title>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-<head>
-	<title>WebGi starter</title>
-	<meta charset="UTF-8" />
-	<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
-</head>
+  <body>
+		<div class="loader">
+			<p>Loading...</p>
+			<div class="progress"></div>
+		</div>
+		
+    <nav class="nav--bar">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="1.5"
+        stroke="currentColor"
+        class="size-6"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M8.25 3v1.5M4.5 8.25H3m18 0h-1.5M4.5 12H3m18 0h-1.5m-15 3.75H3m18 0h-1.5M8.25 19.5V21M12 3v1.5m0 15V21m3.75-18v1.5m0 15V21m-9-1.5h10.5a2.25 2.25 0 0 0 2.25-2.25V6.75a2.25 2.25 0 0 0-2.25-2.25H6.75A2.25 2.25 0 0 0 4.5 6.75v10.5a2.25 2.25 0 0 0 2.25 2.25Zm.75-12h9v9h-9v-9Z"
+        />
+      </svg>
+      <button class="btn--navbar">Contact</button>
+    </nav>
 
-<body>
-	<div id="webgi-canvas-container">
-		<canvas id="webgi-canvas"></canvas>
-	</div>
+    <section class="section section--1">
+      <div class="text--wrap">
+        <h1>3DWebsites</h1> 
+      </div>
+    </section>
 
-	<script src="src/index.ts" type="module"></script>
-</body>
+    <section class="section section--2">
+      <div class="text--wrap">
+        <h3>Consetetur sadipscing elitr</h3>
+        <p>
+          At vero eos et accusam et justo duo dolores et ea rebum. Stet clita
+          kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit
+          amet.
+        </p>
+      </div>
+      <div class="line-bg"></div>
+    </section>
 
+    <section class="section section--contact">
+      <div class="text--wrap">
+        <h3>Lets talk</h3>
+        <ul>
+          <li>
+            <a href="">aleksej.3dweb@gmail.com </a>
+          </li>
+          <li>
+						<a href="">0152 544161516</a>
+					</li>
+        </ul>
+      </div>
+    </section>
+
+    <div id="webgi-canvas-container">
+      <canvas id="webgi-canvas"></canvas>
+    </div>
+
+    <script src="src/index.ts" type="module"></script>
+  </body>
 </html>
